@@ -9,7 +9,7 @@ function Navbar() {
       </div>
       <ul className="nav-links">
         <li><Link to={NEWS_ROUTE}>News</Link></li>
-        <li><Link to={STOCK_ROUTE}>Stock</Link></li>
+        <li><Link to={STOCK_ROUTE}>Stock History</Link></li>
       </ul>
     </nav>
   );

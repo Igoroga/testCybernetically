@@ -3,10 +3,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 function OneNews({headline, image, summary, url }) {
-    const {ref, inView} = useInView({
-        threshold: 0.1,
-    })
-
+   
   return (
     <div className="article">
       <img className="imageNwes" src={image} alt={headline} />

@@ -4,7 +4,7 @@ import { getReports} from '../api/api'
 import axios from 'axios';
 import Spinner from './Spinner';
 import { useInView } from 'react-intersection-observer';
-
+import token from '../token/token';
 
 
 const ListNews = () => {
@@ -23,8 +23,7 @@ useEffect(()=>{
 },[inView])
 
     useEffect(() => {
-      const token = 'pk_fe6d7166b78c45caa34379e92b699531';
-        getReports(token,toNews)
+         getReports(token,toNews)
         .then(response => {
           setArticles(response.data);
           setLoading(false);

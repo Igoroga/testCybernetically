@@ -4,8 +4,7 @@ import { StockRoutes } from '../routes';
 import { NewsRoutes } from '../routes';
 
 
-
-
+// Апроутер заточен под дальнейшее расширение
 
 const AppRouter = () => {
 

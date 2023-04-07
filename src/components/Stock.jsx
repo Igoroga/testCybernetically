@@ -1,15 +1,22 @@
 import React from 'react';
 
-const stock = () => {
+const Stock = (change) => {
 
 
 
     
     return (
-        <div>
-            
-        </div>
-    );
+<tr>
+  <td>{change.symbol}</td>
+  <td>{change.label}</td>
+  <td>{change.date}</td>
+  <td>{change.open}</td>
+  <td>{change.high}</td>
+  <td>{change.low}</td>
+  <td>{change.close}</td>
+  <td>{change.volume}</td>
+</tr> 
+)     
 };
 
-export default stock;
+export default Stock;

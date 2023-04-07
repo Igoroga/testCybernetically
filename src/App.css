@@ -51,20 +51,22 @@ a {
 
 .article {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgb(59, 59, 59);
   margin: 30px auto;
-  max-width: 1000px;
+  max-width: 900px;
   border-radius: 10px;
 }
 
 .imageNwes {
   padding: 20px;
   margin: 10px;
-  max-width: 200px;
-  max-height: 200px;
-  min-width: 200px;
-  
+  margin-top: 0px;
+  width: 200px; /* задаем фиксированную ширину */
+  height: 200px; /* задаем фиксированную высоту */
+  object-fit: cover; /* заполняем контейнер, обрезая лишнее */
+  object-position: center;
+  border-radius: 10px;
 }
 
 .nameArticle {
@@ -202,3 +204,80 @@ nav {
   }
 }
 /* ----------------Loading */
+
+/* -------------------Table */
+.pageStock {
+  height: calc(100vh - 108px);
+}
+
+.buttonFilter {
+  margin: 15px 10px 10px 0px;
+  padding: 10px;
+  
+}
+
+.buttonNumber {
+  margin: 15px 5px 5px 0px;
+  padding: 5px;
+  }
+
+  .buttonNumberActiv {
+    margin: 15px 5px 5px 0px;
+    padding: 7px;
+    background-color: #5b9c8e;
+    color: #ffffff;
+    }
+
+.buttonFilterActiv {
+  margin: 15px 10px 10px 0px;
+  padding: 10px;
+  background-color: #5b9c8e;
+  color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+th {
+  background-color: #5b9c8e;
+  color: #fff;
+  border: 1px solid #6ffac0;
+}
+
+tr:nth-child(even) {
+  background-color: #272727;
+}
+
+tr:hover {
+  background-color: #313131;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  th, td {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 398px) {
+  th, td {
+    padding: 4px;
+    font-size: 9px;
+  }
+}
