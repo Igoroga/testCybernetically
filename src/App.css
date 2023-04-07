@@ -1,38 +1,204 @@
+* {
+  margin:0;
+  margin-top:0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем стандартный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Добавляем цвет фона скроллбара */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+/* Добавляем стиль для ползунка скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #222222;
+  border-radius: 10px;
+  border: 2px solid #f5f5f5;
+}
+
+/* Добавляем стиль для ползунка скроллбара при наведении на него курсора */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
+
+/* Добавляем стиль для кнопок начала и конца скроллбара */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Добавляем стиль для полоски между ползунком и началом или концом скроллбара */
+::-webkit-scrollbar-track-piece {
+  background-color: #f5f5f5;
+}
+
+/* Base styles */
 .App {
-  text-align: center;
+  background-color: rgb(26, 25, 25);
+  margin: 0px;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.article {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(59, 59, 59);
+  margin: 30px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+.imageNwes {
+  padding: 20px;
+  margin: 10px;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 200px;
+  
+}
+
+.nameArticle {
+  margin: 10px;
+  max-width: 500px;
+  color: aliceblue;
+}
+
+.textArticle {
+  color: rgb(148, 150, 151);
+  margin: 10px;
+  max-width: 500px;
+}
+
+.readMore {
+  text-decoration: dashed;
+  color: rgb(148, 150, 151);
+  padding: 15px;
+  border-radius: 10px;
+  align-self: end;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
+  background-color: rgb(26, 25, 25);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li + li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .article {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imageNwes {
+    max-width: 100%;
+  }
+  
+  .nameArticle, .textArticle {
+    max-width: 100%;
+  }
+  
+  .readMore {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-top: 20px;
+  }
+  
+  .nav-links li + li {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* ----------------Loading */
+
+
+.spinnerBox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+ height: 90vh;  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
+.spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.spinner div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes spinner {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+/* ----------------Loading */
